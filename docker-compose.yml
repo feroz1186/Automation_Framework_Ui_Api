@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+
+  selenium:
+    image: selenium/standalone-chrome:latest
+    ports:
+      - "4444:4444"
+
+  automation:
+    build: .
+    depends_on:
+      - selenium
+    command: mvn clean test -Dexecution=docker -Dcucumber.filter.tags="@ui"
