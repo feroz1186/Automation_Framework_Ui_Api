@@ -1,0 +1,11 @@
+<suite name="Automation Suite" parallel="false"  thread-count="1">
+<listeners>
+	<listener class-name = "utils.RetryListener">
+	</listener>
+</listeners>
+    <test name="UI and API Tests">
+        <classes>
+            <class name="runners.TestRunner"/>
+        </classes>
+    </test>
+</suite>
