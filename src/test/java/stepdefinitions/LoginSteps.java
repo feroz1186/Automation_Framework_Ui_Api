@@ -1,10 +1,15 @@
 package stepdefinitions;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -49,5 +54,23 @@ public class LoginSteps {
         logger.info("Dashboard verification inprogress.....");
 
         Assert.assertTrue(loginPage.isDashBoardDisplayed());
+    }
+    @When("When user enters username {string} and password {string}")
+    public void datadriven(String uname,String pword)
+    {
+    	loginPage.enterUserName(uname);
+    	loginPage.enterPassword(pword);
+    }
+    
+    @When("user enters the following login details")
+    public void datatabledemo(DataTable dataTable)
+    {
+    	List<Map<String,String>> logindata=dataTable.asMaps(String.class,String.class);
+    	
+    	for(Map<String,String> map : logindata)
+    	{
+    		loginPage.enterUserName(map.get("username"));
+        	loginPage.enterPassword(map.get("password"));
+    	}
     }
 }
