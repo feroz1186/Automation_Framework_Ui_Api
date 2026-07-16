@@ -1,0 +1,27 @@
+# Maven build output
+target/
+
+# Compiled files
+*.class
+
+# Logs
+*.log
+
+# IDE files
+.idea/
+*.iml
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# VS Code
+.vscode/
+
+# Sensitive configuration files
+.env
+*.key
+*.pemtarget/
+*.log
+.env

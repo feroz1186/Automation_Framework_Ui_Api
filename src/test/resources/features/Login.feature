@@ -19,8 +19,8 @@ Examples:
 |admin1		|admin123|
 |admin2		|admin123|
 
-  @ui
-  Scenario: Login with multiple users
+ 
+  Scenario: Login with multiple users - 
     Given user navigates to login page
     When user enters the following login details
       | username | password  |
