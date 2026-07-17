@@ -1,6 +1,6 @@
 Feature: Login functionality
 
-@ui1
+@ui
   Scenario: Successful login with valid credentials
     Given user navigates to login page
     When user enters username "Admin" and password "admin123"

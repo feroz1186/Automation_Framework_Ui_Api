@@ -1,5 +1,7 @@
 base\BasePage.class
+utils\ExcelUtils.class
 api\AuthService.class
+dataProviders\DataProvider.class
 pages\LoginPage.class
 utils\RetryAnalyzer.class
 utils\LocalTime.class
