@@ -28,3 +28,5 @@ Examples:
       | admin1   | admin123  |
       | admin2   | admin123  |
     And user clicks login button  
+    And check the user reached proper area
+    
