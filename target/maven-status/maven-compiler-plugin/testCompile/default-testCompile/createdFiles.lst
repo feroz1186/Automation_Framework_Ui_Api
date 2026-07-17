@@ -1,4 +1,0 @@
-stepdefinitions\LoginSteps.class
-runners\TestRunner.class
-hooks\Hooks.class
-stepdefinitions\API_UserSteps.class
